@@ -1,21 +1,42 @@
+
+
 {
   "expo": {
     "name": "QC-BUZZER",
     "slug": "QC-BUZZER",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/qc-logo-2.png",
     "scheme": "myapp",
+    "platforms": ["ios", "android"],
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "extra": {
+      "ORS_API_KEY": "5b3ce3597851110001cf624872a33d936f444eae98f0606254c1f530",
+      "SUPABASE_URL": "https://vnaszicqjcljivjdsdpu.supabase.co",
+      "SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZuYXN6aWNxamNsaml2amRzZHB1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY0NTYyNDQsImV4cCI6MjA2MjAzMjI0NH0.9ei13PfQioa7k-o8hWRq1aToTAXlnuTy5EASbAwrLS8",
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "aad7ceb3-dbfb-4293-a34a-0c243e3159a7"
+      }
+    },
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/qc-logo-2.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "versionCode": 1,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION"
+      ],
+      "package": "com.anonymous.QCBUZZER"
     },
     "web": {
       "bundler": "metro",

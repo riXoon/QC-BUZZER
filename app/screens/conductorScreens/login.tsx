@@ -6,6 +6,7 @@ import BackButton from '@/components/BackButton';
 import { useRouter } from 'expo-router';
 import { loginBus } from '@/service/authService';
 import * as Crypto from 'expo-crypto'; 
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { supabase } from '@/service/supabaseClient'; 
 
 export default function Login() {
@@ -52,6 +53,7 @@ export default function Login() {
         console.log('Login successful:', data);
         alert('Login successful!');
         router.push('/screens/conductorScreens/status');
+        await AsyncStorage.setItem('busAccount', JSON.stringify(data));
       } else {
         alert('Incorrect bus code or password');
       }

@@ -36,7 +36,7 @@ const RouteDetails = () => {
           const stopCoords = route.bus_route_stops.map((stop: any) => [stop.longitude, stop.latitude]);
 
           const orsData = await getORSRoute(stopCoords);
-          const snappedCoords = orsData?.features?.[0]?.geometry?.coordinates.map(
+          const snappedCoords = orsData?.geometry?.coordinates.map(
             ([lng, lat]: [number, number]) => ({
               latitude: lat,
               longitude: lng,
